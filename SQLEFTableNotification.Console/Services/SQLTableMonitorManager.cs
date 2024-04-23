@@ -1,15 +1,9 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using SQLEFTableNotification.Domain;
+﻿using SQLEFTableNotification.Domain;
 using SQLEFTableNotification.Domain.Service;
 using SQLEFTableNotification.Entity;
 using SQLEFTableNotification.Entity.Entity;
 using SQLEFTableNotification.Interfaces;
 using SQLEFTableNotification.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SQLEFTableNotification.Console.Services
 {
@@ -23,7 +17,7 @@ namespace SQLEFTableNotification.Console.Services
         private readonly IChangeTableService<UserChangeTable> _changeTableService;
         private readonly UserServiceAsync<UserViewModel, User> _userService;
 
-        public SQLTableMonitorManager(IChangeTableService<UserChangeTable> changeTableService,UserServiceAsync<UserViewModel,User> userService)
+        public SQLTableMonitorManager(IChangeTableService<UserChangeTable> changeTableService, UserServiceAsync<UserViewModel, User> userService)
         {
             _changeTableService = changeTableService;
             _userService = userService;
@@ -35,7 +29,7 @@ namespace SQLEFTableNotification.Console.Services
             IDBNotificationService<UserChangeTable> sqlDBNotificationService = new SqlDBNotificationService<UserChangeTable>("User", connectionString, _changeTableService, -1, TimeSpan.FromHours(1), "API");
             await sqlDBNotificationService.StartNotify();
             sqlDBNotificationService.OnChanged += SqlDBNotificationService_OnChanged;
-            sqlDBNotificationService.OnError += SqlDBNotificationService_OnError; 
+            sqlDBNotificationService.OnError += SqlDBNotificationService_OnError;
         }
 
         private async void SqlDBNotificationService_OnError(object sender, SQLEFTableNotification.Models.ErrorEventArgs e)

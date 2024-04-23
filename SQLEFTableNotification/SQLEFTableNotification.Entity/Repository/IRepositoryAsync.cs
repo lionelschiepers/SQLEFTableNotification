@@ -18,6 +18,6 @@ namespace SQLEFTableNotification.Entity.Repository
 
         IQueryable<T> GetEntityWithRawSql(string query, params object[] parameters);
         IQueryable<TViewModel> GetModelWithRawSql<TViewModel>(string query, params object[] parameters) where TViewModel : class;
-        
+
     }
 }

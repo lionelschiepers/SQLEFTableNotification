@@ -1,8 +1,6 @@
 ﻿using AutoMapper;
 using SQLEFTableNotification.Entity;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace SQLEFTableNotification.Domain.Mapping
 {

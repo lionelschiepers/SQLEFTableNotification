@@ -1,7 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using System;
-using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
 

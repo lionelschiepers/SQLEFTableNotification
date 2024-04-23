@@ -6,17 +6,12 @@ using SQLEFTableNotification.Entity;
 using SQLEFTableNotification.Entity.Entity;
 using SQLEFTableNotification.Entity.UnitofWork;
 using SQLEFTableNotification.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SQLEFTableNotification.Console.Services
 {
-    public class ChangeTableService<T,TView> : GenericServiceAsync<TView,T>, IChangeTableService<T> where T : BaseEntity where TView : BaseDomain
+    public class ChangeTableService<T, TView> : GenericServiceAsync<TView, T>, IChangeTableService<T> where T : BaseEntity where TView : BaseDomain
     {
-        public ChangeTableService(IUnitOfWork unitOfWork,IMapper mapper)
+        public ChangeTableService(IUnitOfWork unitOfWork, IMapper mapper)
             : base(unitOfWork, mapper)
         {
 

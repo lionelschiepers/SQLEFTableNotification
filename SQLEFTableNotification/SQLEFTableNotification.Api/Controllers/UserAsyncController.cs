@@ -1,13 +1,10 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using Serilog;
 using SQLEFTableNotification.Domain;
 using SQLEFTableNotification.Domain.Service;
 using SQLEFTableNotification.Entity;
-using SQLEFTableNotification.Entity.Context;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace SQLEFTableNotification.Api.Controllers

@@ -1,10 +1,7 @@
 ﻿
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.IdentityModel.Abstractions;
 using SQLEFTableNotification.Console.Services;
-using SQLEFTableNotification.Entity.Entity;
 using SQLEFTableNotification.Interfaces;
-using SQLEFTableNotification.Services;
 
 public class MainProgram
 {
@@ -20,8 +17,8 @@ public class MainProgram
         .BuildServiceProvider();
 
         ISQLTableMonitorManager tableMonitorManager = serviceProvider.GetRequiredService<ISQLTableMonitorManager>();
-        Task.Run( async()=> await tableMonitorManager.Invoke()).Wait();
+        Task.Run(async () => await tableMonitorManager.Invoke()).Wait();
     }
 
-   
+
 }

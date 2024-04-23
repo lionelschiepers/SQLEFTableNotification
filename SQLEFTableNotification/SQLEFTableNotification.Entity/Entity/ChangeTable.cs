@@ -1,14 +1,9 @@
 ﻿using SQLEFTableNotification.Entity.Model;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SQLEFTableNotification.Entity.Entity
 {
-    public class ChangeTable 
+    public class ChangeTable
     {
         public long? SYS_CHANGE_VERSION { get; set; }
         public long? SYS_CHANGE_CREATION_VERSION { get; set; }

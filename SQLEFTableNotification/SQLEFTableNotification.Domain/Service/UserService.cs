@@ -1,14 +1,10 @@
 ﻿using AutoMapper;
 using SQLEFTableNotification.Entity;
 using SQLEFTableNotification.Entity.UnitofWork;
-using System;
-using System.Collections.Generic;
-using System.Linq.Expressions;
-using System.Text;
 
 namespace SQLEFTableNotification.Domain.Service
 {
-    public class UserService<Tv, Te> : GenericService<Tv, Te>,IUserService<Tv, Te>
+    public class UserService<Tv, Te> : GenericService<Tv, Te>, IUserService<Tv, Te>
                                                 where Tv : UserViewModel
                                                 where Te : User
     {
@@ -28,7 +24,7 @@ namespace SQLEFTableNotification.Domain.Service
         }
     }
 
-    internal interface IUserService<Tv,Te>: IService<Tv, Te>
+    internal interface IUserService<Tv, Te> : IService<Tv, Te>
     {
     }
 }

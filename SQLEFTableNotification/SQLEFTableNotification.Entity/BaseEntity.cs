@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SQLEFTableNotification.Entity
 {
-    public class BaseEntity:IEntityPk
+    public class BaseEntity : IEntityPk
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
