@@ -8,9 +8,6 @@ namespace SQLEFTableNotification.Interfaces
 
         event ChangedEventHandler<T> OnChanged;
 
-        //event StatusEventHandler OnStatusChanged;
-
-        // SetFilterExpression(Expression<Func<T, bool>> expression);
         Task StartNotify();
         Task StopNotify();
     }
